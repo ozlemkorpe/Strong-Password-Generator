@@ -122,6 +122,7 @@
                         <color key="backgroundColor" red="0.17254901960784313" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="generatedPasswordTextField" destination="UEU-xn-TZa" id="hnu-Vg-ghE"/>
                         <outlet property="passwordLengthLabel" destination="CZt-zj-c5S" id="5vk-Na-Jlu"/>
                         <outlet property="passwordLengthSlider" destination="JgW-Nw-jy1" id="91F-T2-pHZ"/>
                     </connections>

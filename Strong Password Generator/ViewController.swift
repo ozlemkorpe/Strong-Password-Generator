@@ -12,6 +12,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordLengthLabel: UILabel!
     @IBOutlet weak var passwordLengthSlider: UISlider!
     
+    @IBOutlet weak var generatedPasswordTextField: UITextField!
+    
+    
     var possiblePasswordCharactersSet = Set<String>()
     var passwordLength = 10
     
@@ -83,6 +86,8 @@ class ViewController: UIViewController {
         
         // Combine substring into a string
         let finalPassword = subsetOfPasswordCharacters.joined()
+        
+        generatedPasswordTextField.text = finalPassword
         
         print("Created password is: \(finalPassword)")
     }
