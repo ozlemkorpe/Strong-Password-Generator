@@ -93,5 +93,20 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func copyButtonClicked(_ sender: UIButton) {
+
+        guard let coppiedPassword = generatedPasswordTextField.text else {
+                    return
+                }
+               // Copy text to the clipboard
+                UIPasteboard.general.string = coppiedPassword
+        
+        let alertController = UIAlertController(title: "Text Copied", message: "The text has been copied to the clipboard.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+
+        
 }
 
