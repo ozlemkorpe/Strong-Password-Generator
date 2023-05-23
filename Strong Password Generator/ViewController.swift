@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var generatedPasswordTextField: UITextField!
     
+    @IBOutlet weak var copyButton: UIButton!
     
     var possiblePasswordCharactersSet = Set<String>()
     var passwordLength = 10
@@ -33,7 +34,11 @@ class ViewController: UIViewController {
         
         passwordLengthSlider.minimumValue = 6
         passwordLengthSlider.maximumValue = 20
-        passwordLengthSlider.value = 10    }
+        passwordLengthSlider.value = 10
+        
+        // Disable password button before the password generation
+        copyButton.isEnabled = false
+    }
 
     @IBAction func includeNumbersEnabled(_ sender: UISwitch) {
         
@@ -90,11 +95,15 @@ class ViewController: UIViewController {
         generatedPasswordTextField.text = finalPassword
         
         print("Created password is: \(finalPassword)")
+        // Enable password button after password generation
+        copyButton.isEnabled = true
+        
+        
     }
     
     
     @IBAction func copyButtonClicked(_ sender: UIButton) {
-
+        
         guard let coppiedPassword = generatedPasswordTextField.text else {
                     return
                 }
