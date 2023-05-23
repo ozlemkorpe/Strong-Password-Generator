@@ -9,8 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var passwordLengthLabel: UILabel!
+    @IBOutlet weak var passwordLengthSlider: UISlider!
+    
     var possiblePasswordCharactersSet = Set<String>()
-    var passwordLength = 6
+    var passwordLength = 10
     
     // Character sets
     let lowerCaseAlphabetSet: Set<String> = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","r","s","t","u","v","w","x","y","z"]
@@ -21,11 +24,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
         possiblePasswordCharactersSet = possiblePasswordCharactersSet.union(lowerCaseAlphabetSet)
         //print("Possible characters are: \(possiblePasswordCharactersSet)")
-    }
+        
+        passwordLengthSlider.minimumValue = 6
+        passwordLengthSlider.maximumValue = 20
+        passwordLengthSlider.value = 10    }
 
     @IBAction func includeNumbersEnabled(_ sender: UISwitch) {
         
@@ -58,12 +63,20 @@ class ViewController: UIViewController {
         }
         print("Possible characters are: \(possiblePasswordCharactersSet)")
     }
+    
+    
+    // Set the password length
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        passwordLength = Int(sender.value)
+        passwordLengthLabel.text = (String(passwordLength))
+        //print("Slider value: \(passwordLength)")
+    }
+    
+    // Generate the password
     @IBAction func generateButtonPressed(_ sender: UIButton) {
         
-        passwordLength = 15
-        
         //Shuffle the set elements to increase randomness
-        var shuffelledPossiblePasswordCharactersSet = possiblePasswordCharactersSet.shuffled()
+        let shuffelledPossiblePasswordCharactersSet = possiblePasswordCharactersSet.shuffled()
         
         // Generate Substring of shuffled elements
         let subsetOfPasswordCharacters = Set(shuffelledPossiblePasswordCharactersSet.prefix(passwordLength))
