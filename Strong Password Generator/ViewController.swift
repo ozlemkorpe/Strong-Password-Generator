@@ -58,5 +58,22 @@ class ViewController: UIViewController {
         }
         print("Possible characters are: \(possiblePasswordCharactersSet)")
     }
+    @IBAction func generateButtonPressed(_ sender: UIButton) {
+        
+        passwordLength = 15
+        
+        //Shuffle the set elements to increase randomness
+        var shuffelledPossiblePasswordCharactersSet = possiblePasswordCharactersSet.shuffled()
+        
+        // Generate Substring of shuffled elements
+        let subsetOfPasswordCharacters = Set(shuffelledPossiblePasswordCharactersSet.prefix(passwordLength))
+        
+        // Combine substring into a string
+        let finalPassword = subsetOfPasswordCharacters.joined()
+        
+        print("Created password is: \(finalPassword)")
+    }
+    
+    
 }
 
