@@ -33,8 +33,8 @@ class ViewController: UIViewController {
         passwordLengthSlider.minimumValue = 6
         passwordLengthSlider.maximumValue = 20
         passwordLengthSlider.value = 10
-        
-        // Disable password button before the password generation
+        generatedPasswordTextField.isEnabled = false
+        // Disable passwopassrd button before the password generation
         copyButton.isEnabled = false
     }
 
