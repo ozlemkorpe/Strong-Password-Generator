@@ -98,7 +98,7 @@ class ViewController: UIViewController {
                // Copy text to the clipboard
                 UIPasteboard.general.string = coppiedPassword
         
-        let alertController = UIAlertController(title: "Text Copied", message: "The text has been copied to the clipboard.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Password Copied", message: "Generated password has been copied to the clipboard.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
