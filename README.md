@@ -4,7 +4,7 @@ Introducing the Strong Password Generator, a powerful and user-friendly iOS app 
 
 
 <p align="center">
-    <img src="https://github.com/ozlemkorpe/Strong-Password-Generator/blob/main/Screenshots/Screenshots.png" width="1000" height="470">
+    <img src="https://github.com/ozlemkorpe/Strong-Password-Generator/blob/main/Screenshots/Screenshots.png" width="1000" height="485">
 </p>
 
 ## Authors
