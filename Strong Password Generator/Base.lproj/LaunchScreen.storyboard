@@ -15,8 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-dark" translatesAutoresizingMaskIntoConstraints="NO" id="8bg-Ee-qVG">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4e8-oR-M8a">
-                                <rect key="frame" x="130" y="342" width="130" height="161"/>
+                                <rect key="frame" x="130" y="321" width="130" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -30,6 +34,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg-dark" width="1024" height="2048"/>
         <image name="lockIcon" width="341.33334350585938" height="341.33334350585938"/>
     </resources>
 </document>
