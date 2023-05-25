@@ -15,9 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-light2" translatesAutoresizingMaskIntoConstraints="NO" id="EDN-G0-GzR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-light2" translatesAutoresizingMaskIntoConstraints="NO" id="EDN-G0-GzR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3e5-EY-b7W">
                                 <rect key="frame" x="56" y="399" width="49" height="31"/>
@@ -134,6 +133,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.17254901960784313" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="EDN-G0-GzR" secondAttribute="bottom" id="0QC-us-KXb"/>
+                            <constraint firstItem="EDN-G0-GzR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="8rA-kz-oNc"/>
+                            <constraint firstItem="EDN-G0-GzR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="no7-CQ-SQu"/>
+                            <constraint firstItem="EDN-G0-GzR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="s4E-WX-fTv"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="copyButton" destination="9s1-1j-Pku" id="0BH-LW-C4U"/>
